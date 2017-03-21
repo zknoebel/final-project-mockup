@@ -34,3 +34,31 @@ FlowRouter.notFound = {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
   },
 };
+
+FlowRouter.route('/listings', {
+  name: 'Listings_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Listings_Page' });
+  },
+});
+
+FlowRouter.route('/user-listings', {
+  name: 'User_Listings_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Listings_Page' });
+  },
+});
+
+FlowRouter.route('/user-profile', {
+  name: 'User_Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Profile_Page' });
+  },
+});
+
+FlowRouter.route('/admin-home', {
+  name: 'Admin_Home_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Admin_Home_Page' });
+  },
+});
