@@ -1,13 +1,28 @@
 <template name="Admin_Home_Page">
-  <div style="padding-top: 20px" class="ui text container">
-    admin
+  <div style="padding-top: 20px" class="ui middle aligned centered grid container">
+    <h1>
+      Admin Functions
+    </h1>
   </div>
-  <div class="ui container">
-    <div class="ui form">
-      <div class="field">
-        UserName
+  <div class="ui grid container">
+    <div>
+      <div class="ui search">
+        <input class="prompt" placeholder="find user..." type="text">
+        <div class="results"></div>
       </div>
-      <button class="ui button" type="submit">Block User</button>
+      <div class="ui search">
+        <input class="prompt" placeholder="block user..." type="text">
+        <div class="results"></div>
+      </div>
+      <div class="ui search">
+        <input class="prompt" placeholder="unblock user..." type="text">
+        <div class="results"></div>
+      </div>
+    </div>
+    <div>
+      <button class="ui fluid button" type="submit">Find User</button>
+      <button class="ui fluid button" type="submit">Block User</button>
+      <button class="ui fluid button" type="submit">Unblock User</button>
     </div>
   </div>
 </template>

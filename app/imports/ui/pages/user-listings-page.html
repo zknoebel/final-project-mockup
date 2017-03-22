@@ -1,13 +1,14 @@
 <template name="User_Listings_Page">
-    <div style="padding-top: 40px" class="ui text container">
+  <div style="padding-top: 40px" class="ui text container">
     Your Listings
-    </div>
+  </div>
   <div class="ui container">
     <table class="ui celled table">
       <thead>
       <tr>
         <th>Name</th>
         <th>Location</th>
+        <th>Day</th>
         <th>Start Time</th>
         <th>End Time</th>
       </tr>
@@ -16,36 +17,447 @@
       <tbody>
       <tr>
         <td>Zac Knoebel</td>
-        <td>Kailua</td>
-        <td>Mon 7:00</td>
-        <td>Mon 21:00</td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectLocation" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Location</div>
+            <div class="menu">
+              <div class="item" data-value="0">Aiea</div>
+              <div class="item" data-value="1">Ewa Beach</div>
+              <div class="item" data-value="2">Hale'iwa</div>
+              <div class="item" data-value="3">Hau'ula</div>
+              <div class="item" data-value="4">Hawaii Kai</div>
+              <div class="item" data-value="5">Honolulu</div>
+              <div class="item" data-value="6">Ka'a'awa</div>
+              <div class="item" data-value="7">Kahala</div>
+              <div class="item" data-value="8">Kahuku</div>
+              <div class="item" data-value="9">Kailua</div>
+              <div class="item" data-value="10">Kane'ohe</div>
+              <div class="item" data-value="11">Kapolei</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectDay" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Day</div>
+            <div class="menu">
+              <div class="item" data-value="6">Sunday</div>
+              <div class="item" data-value="5">Monday</div>
+              <div class="item" data-value="4">Tuesday</div>
+              <div class="item" data-value="3">Wednesday</div>
+              <div class="item" data-value="2">Thursday</div>
+              <div class="item" data-value="1">Friday</div>
+              <div class="item" data-value="0">Saturday</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectStartTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Start Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectEndTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select End Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>Zac Knoebel</td>
-        <td>Kailua</td>
-        <td>Tues 7:00</td>
-        <td>Tues 16:00</td>
+        <td>
+          <div class="ui selection fluid dropdown"><input name="selectLocation" type="hidden"> <i
+              class="dropdown icon"></i>
+            <div class="default text">Select Location</div>
+            <div class="menu">
+              <div class="item" data-value="0">Aiea</div>
+              <div class="item" data-value="1">Ewa Beach</div>
+              <div class="item" data-value="2">Hale'iwa</div>
+              <div class="item" data-value="3">Hau'ula</div>
+              <div class="item" data-value="4">Hawaii Kai</div>
+              <div class="item" data-value="5">Honolulu</div>
+              <div class="item" data-value="6">Ka'a'awa</div>
+              <div class="item" data-value="7">Kahala</div>
+              <div class="item" data-value="8">Kahuku</div>
+              <div class="item" data-value="9">Kailua</div>
+              <div class="item" data-value="10">Kane'ohe</div>
+              <div class="item" data-value="11">Kapolei</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectDay" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Day</div>
+            <div class="menu">
+              <div class="item" data-value="6">Sunday</div>
+              <div class="item" data-value="5">Monday</div>
+              <div class="item" data-value="4">Tuesday</div>
+              <div class="item" data-value="3">Wednesday</div>
+              <div class="item" data-value="2">Thursday</div>
+              <div class="item" data-value="1">Friday</div>
+              <div class="item" data-value="0">Saturday</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectStartTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Start Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectEndTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select End Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>Zac Knoebel</td>
-        <td>Kailua</td>
-        <td>Wed 7:00</td>
-        <td>Wed 21:00</td>
+        <td>
+          <div class="ui selection fluid dropdown"><input name="selectLocation" type="hidden"> <i
+              class="dropdown icon"></i>
+            <div class="default text">Select Location</div>
+            <div class="menu">
+              <div class="item" data-value="0">Aiea</div>
+              <div class="item" data-value="1">Ewa Beach</div>
+              <div class="item" data-value="2">Hale'iwa</div>
+              <div class="item" data-value="3">Hau'ula</div>
+              <div class="item" data-value="4">Hawaii Kai</div>
+              <div class="item" data-value="5">Honolulu</div>
+              <div class="item" data-value="6">Ka'a'awa</div>
+              <div class="item" data-value="7">Kahala</div>
+              <div class="item" data-value="8">Kahuku</div>
+              <div class="item" data-value="9">Kailua</div>
+              <div class="item" data-value="10">Kane'ohe</div>
+              <div class="item" data-value="11">Kapolei</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectDay" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Day</div>
+            <div class="menu">
+              <div class="item" data-value="6">Sunday</div>
+              <div class="item" data-value="5">Monday</div>
+              <div class="item" data-value="4">Tuesday</div>
+              <div class="item" data-value="3">Wednesday</div>
+              <div class="item" data-value="2">Thursday</div>
+              <div class="item" data-value="1">Friday</div>
+              <div class="item" data-value="0">Saturday</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectStartTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Start Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectEndTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select End Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>Zac Knoebel</td>
-        <td>Kailua</td>
-        <td>Thurs 7:00</td>
-        <td>Thurs 16:00</td>
+        <td>
+          <div class="ui selection fluid dropdown"><input name="selectLocation" type="hidden"> <i
+              class="dropdown icon"></i>
+            <div class="default text">Select Location</div>
+            <div class="menu">
+              <div class="item" data-value="0">Aiea</div>
+              <div class="item" data-value="1">Ewa Beach</div>
+              <div class="item" data-value="2">Hale'iwa</div>
+              <div class="item" data-value="3">Hau'ula</div>
+              <div class="item" data-value="4">Hawaii Kai</div>
+              <div class="item" data-value="5">Honolulu</div>
+              <div class="item" data-value="6">Ka'a'awa</div>
+              <div class="item" data-value="7">Kahala</div>
+              <div class="item" data-value="8">Kahuku</div>
+              <div class="item" data-value="9">Kailua</div>
+              <div class="item" data-value="10">Kane'ohe</div>
+              <div class="item" data-value="11">Kapolei</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectDay" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Day</div>
+            <div class="menu">
+              <div class="item" data-value="6">Sunday</div>
+              <div class="item" data-value="5">Monday</div>
+              <div class="item" data-value="4">Tuesday</div>
+              <div class="item" data-value="3">Wednesday</div>
+              <div class="item" data-value="2">Thursday</div>
+              <div class="item" data-value="1">Friday</div>
+              <div class="item" data-value="0">Saturday</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectStartTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Start Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectEndTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select End Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>Zac Knoebel</td>
-        <td>Kailua</td>
-        <td>Fri 7:00</td>
-        <td>Fri 17:00</td>
+        <td>
+          <div class="ui selection fluid dropdown"><input name="selectLocation" type="hidden"> <i
+              class="dropdown icon"></i>
+            <div class="default text">Select Location</div>
+            <div class="menu">
+              <div class="item" data-value="0">Aiea</div>
+              <div class="item" data-value="1">Ewa Beach</div>
+              <div class="item" data-value="2">Hale'iwa</div>
+              <div class="item" data-value="3">Hau'ula</div>
+              <div class="item" data-value="4">Hawaii Kai</div>
+              <div class="item" data-value="5">Honolulu</div>
+              <div class="item" data-value="6">Ka'a'awa</div>
+              <div class="item" data-value="7">Kahala</div>
+              <div class="item" data-value="8">Kahuku</div>
+              <div class="item" data-value="9">Kailua</div>
+              <div class="item" data-value="10">Kane'ohe</div>
+              <div class="item" data-value="11">Kapolei</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectDay" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Day</div>
+            <div class="menu">
+              <div class="item" data-value="6">Sunday</div>
+              <div class="item" data-value="5">Monday</div>
+              <div class="item" data-value="4">Tuesday</div>
+              <div class="item" data-value="3">Wednesday</div>
+              <div class="item" data-value="2">Thursday</div>
+              <div class="item" data-value="1">Friday</div>
+              <div class="item" data-value="0">Saturday</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectStartTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Start Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="ui selection fluid dropdown">
+            <input name="selectEndTime" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select End Time</div>
+            <div class="menu">
+              <div class="item" data-value="0">04:00</div>
+              <div class="item" data-value="1">05:00</div>
+              <div class="item" data-value="1">06:00</div>
+              <div class="item" data-value="1">07:00</div>
+              <div class="item" data-value="1">08:00</div>
+              <div class="item" data-value="1">09:00</div>
+              <div class="item" data-value="1">10:00</div>
+              <div class="item" data-value="1">11:00</div>
+              <div class="item" data-value="1">12:00</div>
+              <div class="item" data-value="1">13:00</div>
+              <div class="item" data-value="1">14:00</div>
+              <div class="item" data-value="1">15:00</div>
+              <div class="item" data-value="1">16:00</div>
+              <div class="item" data-value="1">17:00</div>
+              <div class="item" data-value="1">18:00</div>
+            </div>
+          </div>
+        </td>
       </tr>
       </tbody>
     </table>
 
   </div>
+  <script>
+    $('.ui.dropdown')
+        .dropdown()
+    ;
+  </script>
 </template>
